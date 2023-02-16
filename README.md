@@ -1,4 +1,4 @@
-# Controle de agendamentos e cadastros - Microsoft Power Plataform
+# Aplicativo Desenvolvido com Power Plataform
 <h2>⚔ Tecnologias Utilizadas</h2>
 
 <div style="display: inline_block">
