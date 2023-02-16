@@ -1,0 +1,664 @@
+DetalhesContatoCliente As screen:
+    Fill: =
+
+    FundoTitulo_3 As rectangle:
+        BorderThickness: =2
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =2
+
+    IconCancelar_3 As icon.Cancel:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Cancel
+        OnSelect: =Back()
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Cancelar item"
+        Width: =88
+        ZIndex: =3
+
+    TituloDetalheCliente_2 As label:
+        Align: =Align.Center
+        Height: =82
+        Size: =27
+        Text: ="Detalhes Contato"
+        Width: =386
+        Wrap: =false
+        X: =88
+        ZIndex: =4
+
+    FormVisualização_2 As formViewer:
+        BorderThickness: =2
+        DataSource: =Contas
+        Height: =1049
+        Item: =GaleriaContatos.Selected
+        Width: =640
+        Y: =86
+        ZIndex: =5
+
+        "'Nome da Conta_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="name"
+            Default: =ThisItem.'Nome da Conta'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =true
+            Width: =639
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey61 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue60 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =35
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        RG_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_rg"
+            Default: =ThisItem.RG
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_rg")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey48 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue47 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        CPF_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_cpf"
+            Default: =ThisItem.CPF
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_cpf")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey49 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =27
+                ZIndex: =1
+
+            DataCardValue48 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        "'Data de Nascimento_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_data_nascimento"
+            Default: =ThisItem.'Data de Nascimento'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_data_nascimento")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey50 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue49 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        Celular_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_celular"
+            Default: =ThisItem.Celular
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_celular")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey51 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue50 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        Email_DataCard2 As typedDataCard.emailViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="emailaddress1"
+            Default: =ThisItem.Email
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"emailaddress1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey52 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue51 As htmlViewer:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =45
+                HtmlText: |-
+                    ="<a href='mailto:" & Parent.Default & "'>" & Parent.Default & "</a>"
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =39
+                ZIndex: =2
+
+        "'Endereço 1: Rua 1_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="address1_line1"
+            Default: |-
+                =ThisItem.'Endereço 1: Rua 1'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"address1_line1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey53 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue52 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =35
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =339
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        "'Número Endereço_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_numeroendereco"
+            Default: =ThisItem.'Número Endereço'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_numeroendereco")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey54 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue53 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        Bairro_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_bairro"
+            Default: =ThisItem.Bairro
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_bairro")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey55 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue54 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        "'Endereço 1: Cidade_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="address1_city"
+            Default: |-
+                =ThisItem.'Endereço 1: Cidade'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"address1_city")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey56 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue55 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =27
+                Y: =48
+                ZIndex: =2
+
+        Estado_DataCard2 As typedDataCard.comboBoxOptionSetSingleViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_estado"
+            Default: =ThisItem.Estado
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_estado")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Update: =DataCardValue56.Selected
+            Width: =639
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey57 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue56 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =45
+                IsSearchable: =false
+                Items: =Choices('Estado (Contas)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =38
+                ZIndex: =2
+
+            ErrorMessage34 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue56.Y + DataCardValue56.Height
+                ZIndex: =3
+
+            StarVisible33 As label:
+                Align: =Align.Center
+                Height: =DataCardKey57.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey57.Y
+                ZIndex: =4
+
+        "'Endereço 1: CEP_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="address1_postalcode"
+            Default: |-
+                =ThisItem.'Endereço 1: CEP'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"address1_postalcode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey58 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue57 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =28
+                Y: =48
+                ZIndex: =2
+
+        "'Complemento Endereço_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_complemento_endereco"
+            Default: =ThisItem.'Complemento Endereço'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_complemento_endereco")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =639
+            X: =0
+            Y: =12
+            ZIndex: =1
+
+            DataCardKey59 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue58 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =37
+                Y: =48
+                ZIndex: =2
+
+        "'Pendência R$_DataCard2' As typedDataCard.USCurrencyViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_pendencia"
+            Default: =ThisItem.'Pendência R$'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Contas],DataSourceInfo.DisplayName,"smt_pendencia")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =638
+            X: =0
+            Y: =13
+            ZIndex: =1
+
+            DataCardKey60 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                ZIndex: =1
+
+            DataCardValue59 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: |-
+                    ="R$: " & Text(Parent.Default, "$###.##")
+                Width: =Parent.Width - 60
+                X: =37
+                Y: =38
+                ZIndex: =2
+
+    IconApagar_2 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Trash
+        OnSelect: =Remove(Contas,GaleriaContatos.Selected); Navigate(ListaCliente)
+        Width: =52
+        X: =500
+        Y: =12
+        ZIndex: =6
+
+    IconEditar_2 As icon.Edit:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Icon: =Icon.Edit
+        OnSelect: |-
+            =Set(
+                varVisibMascarRG,
+                false
+            );
+            Set(
+                varVisibilidadeMascara,
+                false
+            );
+            Set(
+                VarMascara,
+                ""
+            );
+            Set(
+                varMascaraRG,
+                ""
+            );
+            EditForm(FormNovoContato);
+            Navigate(CadastroCliente)
+        Width: =47
+        X: =565
+        Y: =20
+        ZIndex: =7
+

@@ -1,0 +1,173 @@
+ListaAgendamentos As screen:
+
+    FundoSuperior_1 As rectangle:
+        BorderThickness: =2
+        Height: =104
+        Width: =640
+        ZIndex: =2
+
+    BuscaNome_2 As text:
+        Default: =""
+        Height: =78
+        HintText: ="Nome"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =450
+        X: =66
+        Y: =13
+        ZIndex: =3
+
+    IconPesquisa_1 As icon.Search:
+        Height: =43
+        Icon: =Icon.Search
+        Width: =38
+        X: =459
+        Y: =35
+        ZIndex: =4
+
+    Btn_voltar_2 As arrow.backArrow:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =46
+        OnSelect: =Navigate(TelaInicial)
+        Width: =35
+        X: =11
+        Y: =34
+        ZIndex: =5
+
+    IconAtualizar_1 As icon.Reload:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =39
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Agendamentos)
+        Width: =67
+        X: =516
+        Y: =34
+        ZIndex: =6
+
+    IconAdcionar_1 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =42
+        Icon: =Icon.Add
+        OnSelect: =NewForm(FormAgendamentos);Navigate(CadastrarAgendamento)
+        Width: =46
+        X: =594
+        Y: =31
+        ZIndex: =8
+
+    LabelTitulo_1 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(56, 96, 178, 0.81)
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        Size: =30
+        Text: ="Lista de agendamentos"
+        Width: =640
+        Y: =104
+        ZIndex: =9
+
+    "GaleriaAgendamentos As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =968
+        Items: |-
+            =SortByColumns(
+                Search(
+                    Agendamentos,
+                    BuscaNome_2.Text,
+                    "smt_name"
+                ),
+                "smt_name",
+                Ascending
+            )
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =180
+        Y: =168
+        ZIndex: =10
+
+        RetanguloMarcacaoAtivo_1 As rectangle:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(186, 202, 226, 1)
+            Height: =179
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =640
+            ZIndex: =1
+
+        Title11_2 As label:
+            FontWeight: =FontWeight.Normal
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tipo do serviço: " & ThisItem.'Tipo de Serviço'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =521
+            Y: =96
+            ZIndex: =2
+
+        SetaCamposGaleria_2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent); Navigate(FormDetalhesAgendamento);
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        CamposGaleria_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Title11_3 As label:
+            FontWeight: =FontWeight.Normal
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Data agendamento: " & ThisItem.'Horário de Início'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =553
+            Y: =138
+            ZIndex: =7
+
+        Label1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Cliente: " & ThisItem.Cliente.'Nome da Conta'
+            Width: =588
+            ZIndex: =9
+
+        Label2 As label:
+            Height: =34
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Nome do animal: " & ThisItem.Animal.Nome
+            Width: =560
+            Y: =50
+            ZIndex: =10
+

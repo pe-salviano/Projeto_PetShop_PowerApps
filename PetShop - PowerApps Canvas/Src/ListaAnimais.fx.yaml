@@ -1,0 +1,170 @@
+ListaAnimais As screen:
+
+    FundoPesquisa As rectangle:
+        BorderThickness: =1
+        Height: =104
+        Width: =640
+        ZIndex: =1
+
+    "GaleriaAnimais As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =955
+        Items: |-
+            =SortByColumns(
+                Search(
+                    Animais,
+                    BuscaNome_Animais.Text,
+                    "smt_name"
+                ),
+                "smt_name",
+                Ascending
+            )
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =160
+        Y: =181
+        ZIndex: =2
+
+        RetanguloMarcacaoAtivo As rectangle:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(186, 202, 226, 1)
+            Height: =159
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =640
+            Y: =1
+            ZIndex: =1
+
+        Title11_1 As label:
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Nome do Animal: " & ThisItem.Nome
+            VerticalAlign: =VerticalAlign.Top
+            Width: =568
+            Y: =14
+            ZIndex: =2
+
+        Subtitle9_1 As label:
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                ="Idade do Animal: " & ThisItem.'Idade do animal' & " Anos"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =568
+            Y: =106
+            ZIndex: =3
+
+        Body4_1 As label:
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                ="Dono: " & ThisItem.Dono.'Nome da Conta'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =575
+            Y: =60
+            ZIndex: =4
+
+        SetaCamposGaleria As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent); Navigate(DetalhesAnimal)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        CamposGaleria As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+    BuscaNome_Animais As text:
+        Default: =""
+        Height: =78
+        HintText: ="Nome"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =461
+        X: =66
+        Y: =13
+        ZIndex: =3
+
+    IconPesquisa2 As icon.Search:
+        Height: =43
+        Icon: =Icon.Search
+        Width: =38
+        X: =480
+        Y: =32
+        ZIndex: =4
+
+    BtnVoltar As arrow.backArrow:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =53
+        OnSelect: =Navigate(TelaInicial)
+        Width: =45
+        X: =13
+        Y: =13
+        ZIndex: =5
+
+    IconAtualizarRegistros As icon.Reload:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =39
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Animais)
+        Width: =67
+        X: =527
+        Y: =32
+        ZIndex: =6
+
+    IconAdd As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =42
+        Icon: =Icon.Add
+        OnSelect: =NewForm(FormNovoAnimal);Navigate(CadastroAnimais)
+        Width: =46
+        X: =594
+        Y: =31
+        ZIndex: =8
+
+    TituloPágina As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(56, 96, 178, 0.81)
+        FontWeight: =FontWeight.Bold
+        Height: =77
+        Size: =30
+        Text: ="Registro dos Animais"
+        Width: =640
+        Y: =104
+        ZIndex: =9
+

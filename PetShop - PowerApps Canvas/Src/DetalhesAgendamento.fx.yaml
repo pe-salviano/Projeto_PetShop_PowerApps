@@ -1,0 +1,334 @@
+DetalhesAgendamento As screen:
+    OnVisible: =
+
+    FundoTitulo_4 As rectangle:
+        BorderThickness: =2
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =2
+
+    IconCancelar_4 As icon.Cancel:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Cancel
+        OnSelect: =Back()
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Cancelar item"
+        Width: =88
+        ZIndex: =3
+
+    TituloDetalheCliente_3 As label:
+        Align: =Align.Center
+        Height: =82
+        Size: =22
+        Text: ="Detalhes agendamento"
+        Width: =386
+        Wrap: =false
+        X: =88
+        ZIndex: =4
+
+    IconEditar_3 As icon.Edit:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Icon: =Icon.Edit
+        OnSelect: =EditForm(FormAgendamentos);Navigate(CadastrarAgendamento)
+        Width: =47
+        X: =565
+        Y: =20
+        ZIndex: =6
+
+    IconApagar_3 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Trash
+        OnSelect: =Remove(Agendamentos,GaleriaAgendamentos.Selected); Navigate(ListaAgendamentos)
+        Width: =52
+        X: =500
+        Y: =12
+        ZIndex: =7
+
+    FormDetalhesAgendamento As formViewer:
+        BorderThickness: =2
+        DataSource: =Agendamentos
+        Height: =1049
+        Item: =GaleriaAgendamentos.Selected
+        Width: =640
+        Y: =87
+        ZIndex: =8
+
+        "'Tipo de serviço_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_tipodeservico"
+            Default: =ThisItem.'Tipo de Serviço'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_tipo_de_servico")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =638
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey62 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue43 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =27
+                Y: =DataCardKey62.Y + DataCardKey62.Height + 5
+                ZIndex: =2
+
+        Animal_DataCard3 As typedDataCard.comboBoxViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_animal"
+            Default: =ThisItem.Animal
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_animal")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Update: =DataCardValue44.Selected
+            Width: =639
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey63 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue44 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["smt_name"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =55
+                Items: =Choices([@Agendamentos].Animal)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["smt_name"]
+                SearchItems: =Search(Choices([@Agendamentos].Animal),DataCardValue44.SearchText,"smt_name")
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =27
+                Y: =48
+                ZIndex: =2
+
+            ErrorMessage40 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue44.Y + DataCardValue44.Height
+                ZIndex: =3
+
+            StarVisible39 As label:
+                Align: =Align.Center
+                Height: =DataCardKey63.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey63.Y
+                ZIndex: =4
+
+        "'Horário de Início_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_horario_inicio"
+            Default: =ThisItem.'Horário de Início'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_horario_inicio")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =638
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey65 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue46 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =27
+                Y: =DataCardKey65.Y + DataCardKey65.Height + 5
+                ZIndex: =2
+
+        "'Horário de Fim_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_horario_fim"
+            Default: =ThisItem.'Horário de Fim'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_horario_fim")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =638
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey66 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue61 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey66.Y + DataCardKey66.Height + 5
+                ZIndex: =2
+
+        Valor_DataCard3 As typedDataCard.USCurrencyViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_valor"
+            Default: =ThisItem.Valor
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_valor")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =false
+            Width: =638
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey67 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue62 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: |-
+                    ="R$: " & Text(Parent.Default, "$###.##")
+                Width: =Parent.Width - 60
+                X: =27
+                Y: =DataCardKey67.Y + DataCardKey67.Height + 5
+                ZIndex: =2
+
+        Nome_DataCard3 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="smt_name"
+            Default: =ThisItem.Nome
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Agendamentos],DataSourceInfo.DisplayName,"smt_name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =129
+            Required: =true
+            Width: =639
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Color: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =18
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =31
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                ZIndex: =2
+

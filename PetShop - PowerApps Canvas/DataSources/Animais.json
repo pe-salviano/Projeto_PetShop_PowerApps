@@ -1,0 +1,214 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "smt_animals",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "smt_animal",
+    "MaxGetRowsCount": 500,
+    "Name": "Animais",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "createdby": "Criada Por",
+      "createdon": "Data de Criação",
+      "createdonbehalfby": "Criado por (Delegado)",
+      "importsequencenumber": "Número de Sequência de Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Data de Modificação",
+      "modifiedonbehalfby": "Modificado por (Delegado)",
+      "overriddencreatedon": "Registro Criado em",
+      "owningbusinessunit": "Unidade de Negócios Proprietária",
+      "owningteam": "Equipe Proprietária",
+      "owninguser": "Usuário Proprietário",
+      "smt_animal_AsyncOperations": "Trabalhos do Sistema",
+      "smt_animal_BulkDeleteFailures": "Falhas da Exclusão em Massa",
+      "smt_animal_DuplicateBaseRecord": "Registros Duplicados (smt_animal_DuplicateBaseRecord)",
+      "smt_animal_DuplicateMatchingRecord": "Registros Duplicados (smt_animal_DuplicateMatchingRecord)",
+      "smt_animal_MailboxTrackingFolders": "Pastas de Acompanhamento Automático da Caixa de Correio",
+      "smt_animal_PrincipalObjectAttributeAccesses": "Compartilhamento de Campo",
+      "smt_animal_ProcessSession": "Sessões de Processo",
+      "smt_animal_SyncErrors": "Erros de Sincronização",
+      "smt_animalid": "Animal",
+      "smt_cordoanimal": "Cor do animal",
+      "smt_descricao_doenca": "Descrição da doença",
+      "smt_dono": "Dono",
+      "smt_especie": "Espécie",
+      "smt_idadedoanimal": "Idade do animal",
+      "smt_manso": "Manso",
+      "smt_name": "Nome",
+      "smt_nomeanimal": "Nome Animal",
+      "smt_porte": "Porte",
+      "smt_possuidoenca": "Possui doença",
+      "smt_raca": "Raça",
+      "smt_sexodoanimal": "Sexo do Animal",
+      "smt_smt_agendamento_animal_smt_animal": "Agendamentos",
+      "smt_tipodoservico": "Tipo do Serviço",
+      "statecode": "Status",
+      "statuscode": "Razão do Status",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão de UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Animais",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Animais (Modos de exibição)",
+    "Name": "_smt_animal_views",
+    "RelatedEntityName": "Animais",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "142a2bc6-016d-4bb6-98c1-2cb258da1876": "Animais Ativos(as)",
+      "183b64ae-5a58-4f77-a9df-26087025c963": "Exibição Associada de Animal",
+      "7956bc97-747a-44c3-862e-9e7defef7862": "Exibição de Consulta de Animal",
+      "c1492271-74df-48fe-9dfb-ca812ee3c9e4": "Animais Inativos(as)",
+      "f32cbf51-602d-4de5-8ef5-8df8e463c070": "Exibição de Localização Avançada de Animal"
+    }
+  },
+  {
+    "DisplayName": "Manso (Animais)",
+    "Name": "smt_animal_smt_manso",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "smt_manso",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "smt_manso",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Porte (Animais)",
+    "Name": "smt_animal_smt_porte",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Pequeno",
+      "100000001": "Médio",
+      "100000002": "Grande"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "smt_porte",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "smt_porte",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Possui doença (Animais)",
+    "Name": "smt_animal_smt_possuidoenca",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "smt_possuidoenca",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "smt_possuidoenca",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Sexo do Animal (Animais)",
+    "Name": "smt_animal_smt_sexodoanimal",
+    "OptionSetInfoNameMapping": {
+      "0": "Macho",
+      "1": "Fêmea"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "smt_sexodoanimal",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "smt_sexodoanimal",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Animais)",
+    "Name": "smt_animal_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo(a)",
+      "1": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Status (Animais)",
+    "Name": "smt_animal_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo(a)",
+      "2": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Serviços Petshop",
+    "Name": "smt_servicospetshop",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Banho",
+      "100000001": "Tosa",
+      "100000002": "Consulta Médica",
+      "100000003": "Medicação",
+      "100000004": "Hospedagem"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "smt_tipodoservico",
+        "OptionSetReferenceEntityName": "Animais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "smt_tipodoservico",
+    "RelatedEntityName": "Animais",
+    "Type": "OptionSetInfo"
+  }
+]
