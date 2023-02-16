@@ -1,0 +1,814 @@
+<ImportExportXml version="9.2.23015.172" SolutionPackageVersion="9.2" languagecode="1046" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>CustomizacoesPetShop</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Customizações PetShop" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.1</Version>
+    <Managed>1</Managed>
+    <Publisher>
+      <UniqueName>CuideBemAppPetShop</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Cuide bem - AppPetShop" languagecode="1046" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>smt</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="1" />
+      <RootComponent type="1" schemaName="smt_agendamento" behavior="0" />
+      <RootComponent type="1" schemaName="smt_animal" behavior="0" />
+      <RootComponent type="9" schemaName="smt_servicospetshop" behavior="0" />
+      <RootComponent type="29" id="{8b630c3a-fb9f-ed11-aad1-000d3a888f52}" behavior="0" />
+      <RootComponent type="29" id="{9658fca6-c4a3-ed11-aad1-000d3a888f52}" behavior="0" />
+      <RootComponent type="60" id="{9c0e1f52-97a5-ed11-aad0-000d3a888f52}" behavior="0" />
+      <RootComponent type="61" schemaName="smt_cuideBem" behavior="0" />
+      <RootComponent type="61" schemaName="smt_ValidacaoCPF" behavior="0" />
+      <RootComponent type="62" schemaName="smt_PetShop" behavior="0" />
+      <RootComponent type="80" schemaName="smt_PetShop" behavior="0" />
+      <RootComponent type="300" schemaName="smt_petshop_f468c" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="incident" displayName="Ocorrência" solution="msdynce_Service (9.0.5.56)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_accountpricelist" displayName="Lista de Preços do Projeto da Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_accountpricelist" displayName="Lista de Preços do Projeto da Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_customerasset" displayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_customerasset" displayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_workorder" displayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_workorder" displayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_workorder" displayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="Oportunidade" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_account_BillingAccount" displayName="msdyn_account_account_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_account_BillingAccount" displayName="msdyn_account_account_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_account_BillingAccount" displayName="msdyn_account_account_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_accountpricelist_Account" displayName="msdyn_account_msdyn_accountpricelist_Account" parentSchemaName="account" parentDisplayName="Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_accountpricelist_Account" displayName="msdyn_account_msdyn_accountpricelist_Account" parentSchemaName="account" parentDisplayName="Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_agreement_BillingAccount" displayName="msdyn_account_msdyn_agreement_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_agreement_BillingAccount" displayName="msdyn_account_msdyn_agreement_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_agreement_ServiceAccount" displayName="msdyn_account_msdyn_agreement_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_agreement_ServiceAccount" displayName="msdyn_account_msdyn_agreement_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_agreement_ServiceAccount" displayName="msdyn_account_msdyn_agreement_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_payment_Account" displayName="msdyn_account_msdyn_payment_Account" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_payment_Account" displayName="msdyn_account_msdyn_payment_Account" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_project_Customer" displayName="msdyn_account_msdyn_project_Customer" parentSchemaName="account" parentDisplayName="Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_project_Customer" displayName="msdyn_account_msdyn_project_Customer" parentSchemaName="account" parentDisplayName="Conta" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rma_BillingAccount" displayName="msdyn_account_msdyn_rma_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rma_BillingAccount" displayName="msdyn_account_msdyn_rma_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rma_ServiceAccount" displayName="msdyn_account_msdyn_rma_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rma_ServiceAccount" displayName="msdyn_account_msdyn_rma_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rtv_Vendor" displayName="msdyn_account_msdyn_rtv_Vendor" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_rtv_Vendor" displayName="msdyn_account_msdyn_rtv_Vendor" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_workorder_BillingAccount" displayName="msdyn_account_msdyn_workorder_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_workorder_BillingAccount" displayName="msdyn_account_msdyn_workorder_BillingAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_workorder_ServiceAccount" displayName="msdyn_account_msdyn_workorder_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_workorder_ServiceAccount" displayName="msdyn_account_msdyn_workorder_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_workorder_ServiceAccount" displayName="msdyn_account_msdyn_workorder_ServiceAccount" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_quote_Account" displayName="msdyn_account_quote_Account" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_salesorder_Account" displayName="msdyn_account_salesorder_Account" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_customerasset_Account" displayName="msdyn_account_msdyn_customerasset_Account" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_customerasset_Account" displayName="msdyn_account_msdyn_customerasset_Account" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_customerasset_Account" displayName="msdyn_account_msdyn_customerasset_Account" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_customerasset_Account" displayName="msdyn_account_msdyn_customerasset_Account" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_purchaseorder_Vendor" displayName="msdyn_account_msdyn_purchaseorder_Vendor" parentSchemaName="msdyn_purchaseorder" parentDisplayName="Ordem de Compra" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_purchaseorder_Vendor" displayName="msdyn_account_msdyn_purchaseorder_Vendor" parentSchemaName="msdyn_purchaseorder" parentDisplayName="Ordem de Compra" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_account_msdyn_purchaseorder_Vendor" displayName="msdyn_account_msdyn_purchaseorder_Vendor" parentSchemaName="msdyn_purchaseorder" parentDisplayName="Ordem de Compra" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_msdyn_taxcode_account_SalesTaxCode" displayName="msdyn_msdyn_taxcode_account_SalesTaxCode" parentSchemaName="msdyn_taxcode" parentDisplayName="Código de Imposto" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_msdyn_taxcode_account_SalesTaxCode" displayName="msdyn_msdyn_taxcode_account_SalesTaxCode" parentSchemaName="msdyn_taxcode" parentDisplayName="Código de Imposto" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_msdyn_workhourtemplate_account_workhourtemplate" displayName="msdyn_msdyn_workhourtemplate_account_workhourtemplate" parentSchemaName="msdyn_workhourtemplate" parentDisplayName="Modelo de trabalho" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_msdyn_workhourtemplate_account_workhourtemplate" displayName="msdyn_msdyn_workhourtemplate_account_workhourtemplate" parentSchemaName="msdyn_workhourtemplate" parentDisplayName="Modelo de trabalho" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_territory_account_ServiceTerritory" displayName="msdyn_territory_account_ServiceTerritory" parentSchemaName="territory" parentDisplayName="Região" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_territory_account_ServiceTerritory" displayName="msdyn_territory_account_ServiceTerritory" parentSchemaName="territory" parentDisplayName="Região" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="msdyn_territory_account_ServiceTerritory" displayName="msdyn_territory_account_ServiceTerritory" parentSchemaName="territory" parentDisplayName="Região" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="defaultpricelevelid" displayName="Lista de Preços de Produtos" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package>msdynce_ProductManagementAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="defaultpricelevelid" displayName="Lista de Preços de Produtos" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package>msdynce_ProductManagementAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="defaultpricelevelid" displayName="Lista de Preços de Produtos" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package>msdynce_ProductManagementAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="defaultpricelevelid" displayName="Lista de Preços de Produtos" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package>msdynce_ProductManagementAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_billingaccount" displayName="Conta de Cobrança" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_billingaccount" displayName="Conta de Cobrança" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_billingaccount" displayName="Conta de Cobrança" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_salestaxcode" displayName="Código do Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_salestaxcode" displayName="Código do Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_serviceterritory" displayName="Região de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_serviceterritory" displayName="Região de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_serviceterritory" displayName="Região de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_taxexempt" displayName="Isenção de Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_taxexempt" displayName="Isenção de Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_taxexemptnumber" displayName="Número de Isenção de Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_taxexemptnumber" displayName="Número de Isenção de Imposto" parentSchemaName="account" parentDisplayName="Conta" solution="FieldServiceCommon (1.0.0.217)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_travelcharge" displayName="Cobrança de Viagem" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_travelcharge" displayName="Cobrança de Viagem" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_travelchargetype" displayName="Tipo de Cobrança de Viagem" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_travelchargetype" displayName="Tipo de Cobrança de Viagem" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_workhourtemplate" displayName="Modelo de Horas de Trabalho" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_workhourtemplate" displayName="Modelo de Horas de Trabalho" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_workorderinstructions" displayName="Instruções de Ordem de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_workorderinstructions" displayName="Instruções de Ordem de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_workorderinstructions" displayName="Instruções de Ordem de Serviço" parentSchemaName="account" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="originatingleadid" displayName="Cliente Potencial Originador" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package>msdynce_LeadManagementAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="originatingleadid" displayName="Cliente Potencial Originador" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package>msdynce_LeadManagementAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="originatingleadid" displayName="Cliente Potencial Originador" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package>msdynce_LeadManagementAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="originatingleadid" displayName="Cliente Potencial Originador" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package>msdynce_LeadManagementAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="territoryid" displayName="Região" parentSchemaName="account" parentDisplayName="Conta" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Acesso ao aplicativo de SAC" solution="msdynce_Customerservicehub (9.0.5.0056)" id="{3dac4d9e-568c-e611-80d4-00155d42a122}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Gerente do Serviço de Atendimento ao Consumidor" solution="msdynce_Service (9.0.5.56)" id="{56412e7e-54d0-45f9-abf7-44c0cb425dd2}" parentId="{1808b939-dd07-4ca7-aa99-ddd2734378f1}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Filiais" solution="Active" id="{6b2eab12-f7a0-ed11-aad1-000d3a888f52}" />
+        <Dependent type="80" schemaName="smt_PetShop" displayName="PetShop" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Field Service - Resource" solution="FieldService (8.8.0.88)" id="{dc08bfde-da92-e111-9d8c-000c2959f9b8}" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Representante do Serviço de Atendimento ao Consumidor" solution="msdynce_Service (9.0.5.56)" id="{ea20b304-3edf-419b-960f-0c5ca1c2e8bb}" parentId="{ecfd0b44-5720-45e3-ae68-417ddb0fb654}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Minhas Ocorrências Ativas" displayName="Minhas Ocorrências Ativas" parentSchemaName="incident" parentDisplayName="Ocorrência" solution="msdynce_Service (9.0.5.56)" id="{00000000-0000-0000-00aa-000010001028}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ocorrências Ativas" displayName="Ocorrências Ativas" parentSchemaName="incident" parentDisplayName="Ocorrência" solution="msdynce_Service (9.0.5.56)" id="{00000000-0000-0000-00aa-000010001032}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Minhas Oportunidades Abertas" displayName="Minhas Oportunidades Abertas" parentSchemaName="opportunity" parentDisplayName="Oportunidade" solution="msdynce_Sales (9.0.4.0076)" id="{00000000-0000-0000-00aa-000010003000}">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Exibição associada dos Ativos do Cliente com alertas" displayName="Exibição associada dos Ativos do Cliente com alertas" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_ConnectedCustomerService (9.0.20115.1027)" id="{38cc036f-fbfe-e911-a81c-000d3ac2c6cb}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ativos de Cliente Ativos" displayName="Ativos de Cliente Ativos" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)" id="{6ecb03a4-acda-44ae-83e3-c60ba8338dbb}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ativos de Cliente Ativos" displayName="Ativos de Cliente Ativos" parentSchemaName="msdyn_customerasset" parentDisplayName="Ativo do Cliente" solution="msdyn_AssetCommon (1.0.28.3)" id="{6ecb03a4-acda-44ae-83e3-c60ba8338dbb}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Oportunidades Recentes" displayName="Oportunidades Recentes" parentSchemaName="opportunity" parentDisplayName="Oportunidade" solution="msdynce_Sales (9.0.4.0076)" id="{9c3f7ee8-eca7-e211-9fb6-00155dd0ea05}">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Listas de Preços de Projeto Ativas" displayName="Listas de Preços de Projeto Ativas" parentSchemaName="msdyn_accountpricelist" parentDisplayName="Lista de Preços do Projeto da Conta" solution="ProjectService (3.10.0.31)" id="{9e8bd99a-72e8-49fe-8c6f-ec1ac8407f5a}" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Listas de Preços de Projeto Ativas" displayName="Listas de Preços de Projeto Ativas" parentSchemaName="msdyn_accountpricelist" parentDisplayName="Lista de Preços do Projeto da Conta" solution="ProjectService (3.10.0.31)" id="{9e8bd99a-72e8-49fe-8c6f-ec1ac8407f5a}" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ordens de Serviço Ativas" displayName="Ordens de Serviço Ativas" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{fce37246-eba1-4e92-bb9d-f8cb3ec38e3f}" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ordens de Serviço Ativas" displayName="Ordens de Serviço Ativas" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{fce37246-eba1-4e92-bb9d-f8cb3ec38e3f}" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ordens de Serviço Ativas" displayName="Ordens de Serviço Ativas" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{fce37246-eba1-4e92-bb9d-f8cb3ec38e3f}" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Ocorrências Ativas por Agente" displayName="Ocorrências Ativas por Agente" parentSchemaName="incident" parentDisplayName="Ocorrência" solution="msdynce_Service (9.0.5.56)" id="{4143b74e-4a07-4d01-9ffe-2cdcaa4208fd}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Principais Clientes" displayName="Principais Clientes" parentSchemaName="opportunity" parentDisplayName="Oportunidade" solution="msdynce_Sales (9.0.4.0076)" id="{8bc5fb18-48f2-4782-9e16-3d452fa4ddce}">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Ordens de Serviço Ativas por Tipo" displayName="Ordens de Serviço Ativas por Tipo" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{8e746648-1a4e-e111-93b3-000c2959f9b8}" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Ordens de Serviço Ativas por Tipo" displayName="Ordens de Serviço Ativas por Tipo" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{8e746648-1a4e-e111-93b3-000c2959f9b8}" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Ordens de Serviço Ativas por Tipo" displayName="Ordens de Serviço Ativas por Tipo" parentSchemaName="msdyn_workorder" parentDisplayName="Ordem de Serviço" solution="FieldService (8.8.0.88)" id="{8e746648-1a4e-e111-93b3-000c2959f9b8}" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="cartão do contato da conta" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="cartão do contato da conta" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="cartão do contato da conta" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="cartão do contato da conta" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="cartão do contato da conta" parentDisplayName="Contato" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="TimelineWallControl - Conta - Principal" parentDisplayName="Conta" solution="OmnichannelBase (1.5.0.5946)" id="{6df8e8ce-7655-468c-925e-660d59aa7f4c}">
+          <package>UnifiedRoutingPrimeAnchor (1.5.16.6424)</package>
+        </Required>
+        <Dependent type="60" displayName="TimelineWallControl - Conta - Principal" parentDisplayName="Conta" id="{6df8e8ce-7655-468c-925e-660d59aa7f4c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Conta - Mobile" parentDisplayName="Conta" solution="FieldService (8.8.0.88)" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Conta" parentDisplayName="Conta" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" solution="msdynce_AppCommon (9.0.4.0066)" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Informações" parentDisplayName="Conta" solution="msdynce_AppCommon (9.0.4.0066)" id="{b053a39a-041a-4356-acef-ddf00182762b}">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Sales Insights" parentDisplayName="Conta" solution="SICommon (9.0.2.3560)" id="{cb430327-bcc1-416d-959d-db7592e685af}">
+          <package>msdynce_SalesInsightsAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Formulário Contextual" parentDisplayName="Conta" solution="msdynce_DealManager (9.0.221031.1)" id="{face3aa6-99c4-4b7e-af07-55f121cdca86}">
+          <package>msdynce_SalesInsightsAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Formulário Contextual" parentDisplayName="Conta" id="{face3aa6-99c4-4b7e-af07-55f121cdca86}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" solution="msdynce_ServicePatch201911 (9.0.23014.1023)" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="TimelineWallControl - Conta - Principal" parentDisplayName="Conta" id="{6df8e8ce-7655-468c-925e-660d59aa7f4c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="AppCommon/Account/Account_main_system_library.js" displayName="AppCommon/Account/Account_main_system_library.js" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.23014.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/Account.Library.js" displayName="msdyn_/Account/Account.Library.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/Account.Library.js" displayName="msdyn_/Account/Account.Library.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/Account.Library.js" displayName="msdyn_/Account/Account.Library.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/ActivityFeeds.Form.js" displayName="msdyn_/ActivityFeeds.Form.js" solution="ActivityFeedsCore (9.0.0.0009)" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/ActivityFeeds.Form.js" displayName="msdyn_/ActivityFeeds.Form.js" solution="ActivityFeedsCore (9.0.0.0009)" />
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/ConnectedCustomerService/Account/AccountForm.js" displayName="msdyn_/ConnectedCustomerService/Account/AccountForm.js" solution="msdyn_ConnectedCustomerService (9.0.20115.1027)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta de Experiência interativa" parentDisplayName="Conta" id="{a72c7955-442b-4ea4-9499-b10cd18b4256}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Libraries/require/require.js" displayName="msdyn_/Libraries/require/require.js" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Libraries/require/require.js" displayName="msdyn_/Libraries/require/require.js" solution="ProjectService (3.10.0.31)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RecordWall.htm" displayName="msdyn_/RecordWall.htm" solution="ActivityFeedsCore (9.0.0.0009)" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Conta" id="{b053a39a-041a-4356-acef-ddf00182762b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RecordWall.htm" displayName="msdyn_/RecordWall.htm" solution="ActivityFeedsCore (9.0.0.0009)" />
+        <Dependent type="60" displayName="Conta para experiência Multissessão" parentDisplayName="Conta" id="{ff49442f-8c60-4877-bdae-8fe51e6f4636}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Utils/FieldServiceTrial.js" displayName="msdyn_/Utils/FieldServiceTrial.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Utils/FieldServiceTrial.js" displayName="msdyn_/Utils/FieldServiceTrial.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Utils/FieldServiceTrial.js" displayName="msdyn_/Utils/FieldServiceTrial.js" solution="FieldService (8.8.0.88)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.23014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.AddressInputUCI" displayName="Microsoft.AddressInputUCI" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.AcceleratedSales.CadenceWidgetControl" displayName="MscrmControls.AcceleratedSales.CadenceWidgetControl" solution="msdyn_acceleratedsales (9.1.23014.10004)">
+          <package>msdyn_AcceleratedSalesAnchor (9.1.23014.10004)</package>
+        </Required>
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Sales Insights" parentDisplayName="Conta" id="{cb430327-bcc1-416d-959d-db7592e685af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2301.5009)" />
+        <Dependent type="60" displayName="Formulário Contextual" parentDisplayName="Conta" id="{face3aa6-99c4-4b7e-af07-55f121cdca86}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.InputMask.InputMaskControl" displayName="MscrmControls.InputMask.InputMaskControl" solution="CustomControlsCore (9.2.23015.00172)" />
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.WebsitePreview.PreviewControl" displayName="MscrmControls.WebsitePreview.PreviewControl" solution="CustomControlsCore (9.2.23015.00172)" />
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta - Mobile" parentDisplayName="Conta" id="{74da4947-5d1d-4400-9f99-c6ed578211bb}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Conta" parentDisplayName="Conta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.28.3)">
+          <package>msdynce_ServiceAnchor (9.0.23014.1023)</package>
+        </Required>
+        <Dependent type="60" displayName="Novo Formulário" parentDisplayName="Conta" id="{a4907098-2e9e-462f-a76d-af73b8007b2c}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

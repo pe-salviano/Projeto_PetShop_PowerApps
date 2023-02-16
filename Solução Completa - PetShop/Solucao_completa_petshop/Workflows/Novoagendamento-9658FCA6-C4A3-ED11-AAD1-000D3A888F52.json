@@ -1,0 +1,131 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "smt_sharedoffice365_fc2d5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "smt_sharedcommondataserviceforapps_a3616"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Quando_uma_linha_é_adicionada,_modificada_ou_excluída": {
+          "metadata": {
+            "operationMetadataId": "39f96a5e-fe77-4fd3-9c85-c0d29bab92e9"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "smt_agendamento",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Enviar_um_email_(V2)": {
+          "runAfter": {
+            "Obter_uma_linha_por_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "08df4a41-4e19-4951-b911-78e0edf31909"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "admin@CuideBemPetShop.onmicrosoft.com",
+              "emailMessage/Subject": "Agendamento realizado com Sucesso!",
+              "emailMessage/Body": "<p>Olá, @{outputs('Obter_uma_linha_por_ID')?['body/name']}&nbsp;, o seu agendamento foi realizado com sucesso para o dia @{triggerOutputs()?['body/smt_horario_inicio']} até @{triggerOutputs()?['body/smt_horario_fim']}.</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Obter_uma_linha_por_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "ca3d65a1-60ff-4afd-ae7b-8cd47a22d44e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "recordId": "@triggerOutputs()?['body/_smt_cliente_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Atualizar_uma_linha": {
+          "runAfter": {
+            "Enviar_um_email_(V2)": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f9a26b69-7903-4b94-abc3-3f8d6728921c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "recordId": "@triggerOutputs()?['body/_smt_cliente_value']",
+              "item/smt_pendencia": "@add(outputs('Obter_uma_linha_por_ID')?['body/smt_pendencia'],triggerOutputs()?['body/smt_valor'])"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
