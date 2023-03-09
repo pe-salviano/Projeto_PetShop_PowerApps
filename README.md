@@ -8,7 +8,7 @@
 </div>
 
 <h2> ATENÇÃO❗</h2>
-- Para vizualizar o aplicativo funcionando é preciso Baixar a solução completa e importar ela no seu ambiente power Apps.
+- Para visualizar o aplicativo funcionando é preciso Baixar a solução completa e importar ela no seu ambiente power Apps.
 
 <h2>:bookmark_tabs: Descrição</h2>
 <p><b>Esse projeto foi desenvolvido do zero com base no treinamento da Smart Consulting</b>
